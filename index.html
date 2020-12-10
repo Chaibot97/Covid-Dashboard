@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Covid Dashboard</title>
+
+    <!-- use the latest d3 6.x release
+         included in the header so it fully loads
+         before our own script needs to use it
+    -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+    <h1 style='margin:0'>Covid Dashboard</h1>
+    <em><b>Hover</b> on the map for a sec to view detials and <b>click</b> to interact</em>
+
+    <button id='selectAll' type="button" style='display:block; margin:10px'>Toggle Select All</button>
+    <div id="plot">
+      <svg id="plot_geo" width="50%" height="45%"></svg>
+      <svg id="plot_heat" width="40%" height="45%"></svg>
+      <br>
+      <svg id="plot_bar" width="40%" height="42%"></svg>
+      <svg id="plot_line" width="40%" height="42%"></svg>
+
+    </div>
+    <p id="barTypeSelector" style="margin:0;font-weight:bold;">Data showing: 
+      <input type="radio" id="cases" name='type' value="cases" value="0" checked="true">
+      <label for="cases">Cases</label>
+      <input type="radio" id="newCases" name='type' value="newCases">
+      <label for="newCases">New Cases</label>
+      <input type="radio" id="deaths" name='type' value="deaths">
+      <label for="deaths">Death</label>
+    </p>
+    <script src="plot.js"></script>
+  </body>
+</html>
