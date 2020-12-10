@@ -370,7 +370,7 @@ function updateLine(rawData, padding) {
     .range([h - padding, padding / 2]);
   const xScale = d3.scaleLinear()
     .domain([0, 14])
-    .range([padding, w - padding]);
+    .range([padding, w - padding * 1.5]);
 
   const lines = plot.selectAll('.line').data(data);
 
@@ -459,7 +459,7 @@ function plotLine(rawData, padding) {
     .range([h - padding, padding / 2]);
   const xScale = d3.scaleLinear()
     .domain([0, 14])
-    .range([padding, w - padding]);
+    .range([padding, w - padding * 1.5]);
 
   const xAxis = d3.axisBottom(xScale);
   const yAxis = d3.axisLeft(yScale);
